@@ -41,6 +41,12 @@ dependencies {
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
-    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     debugImplementation(libs.compose.ui.tooling)
+
+    val composeBom = platform(libs.compose.bom)
+    implementation(composeBom)
+
+    implementation(libs.bundles.compose.ui)
 }

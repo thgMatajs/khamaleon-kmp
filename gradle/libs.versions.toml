@@ -1,17 +1,63 @@
 [versions]
 agp = "8.8.1"
 kotlin = "2.0.0"
-compose = "1.7.8"
-compose-material3 = "1.3.1"
 androidx-activityCompose = "1.10.0"
+appcompat = "1.7.0"
+material = "1.12.0"
+
+coroutines = "1.9.0"
+composeBom = "2025.02.00"
+composeCoil = "2.7.0"
+composeConstraingLayout = "1.1.0"
+androidxWebkit = "1.12.0"
+navigation = "2.8.1"
+activity = "1.10.0"
+fragment = "1.8.3"
+core = "1.13.1"
+appCompat = "1.7.0"
+lifecycle = "2.8.6"
+koin = "3.5.6"
+constraintLayout = "2.1.4"
+coordinatorLayout = "1.2.0"
+recyclerView = "1.3.2"
+pallete = "1.0.0"
+work = "2.9.1"
+firebaseBom = "33.3.0"
+onesignal = "5.1.21"
+room = "2.6.1"
+retrofit = "2.11.0"
+okhttp = "4.12.0"
+gson = "2.11.0"
+cloudy = "0.1.2"
+koin-kmp = "1.2.0-Beta4"
+
+androidxLifecycle = "2.8.6"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
-androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
-compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# Compose
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+compose-material = { module = "androidx.compose.material:material" }
+compose-material-icons = { module = "androidx.compose.material:material-icons-extended" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-animation = { module = "androidx.compose.animation:animation" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" }
+compose-coil = { module = "io.coil-kt:coil-compose", version.ref = "composeCoil" }
+compose-constraintlayout = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "composeConstraingLayout" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+
+[bundles]
+compose-ui = ["compose-material", "compose-material-icons", "compose-material3", "compose-ui", "compose-ui-viewbinding", "compose-ui-tooling-preview", "compose-animation",
+    "compose-runtime-livedata", "compose-coil", "compose-constraintlayout", "compose-activity"]
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
